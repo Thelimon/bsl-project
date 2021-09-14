@@ -7,8 +7,7 @@ import {
 
 @Component({
   selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss'],
+  templateUrl: './carousel.component.html'
 })
 export class CarouselComponent {
   images = [62, 83, 466, 965, 982, 1043, 738].map(
