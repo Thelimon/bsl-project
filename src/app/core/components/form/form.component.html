@@ -1,0 +1,36 @@
+<section class="section-form">
+  <div class="div">
+    <iframe src="" frameborder="0"> </iframe>
+  </div>
+  <form class="form" [formGroup]="reactiveForm">
+    <h2>Leave your Message Here!</h2>
+    <input
+      class="form-control"
+      id="name"
+      type="text"
+      formControlName="name"
+      placeholder=" Enter your Name"
+      required
+    />
+    <p class="text-danger" *ngIf=" reactiveForm.controls['name'].invalid && (reactiveForm.controls['name'].touched)"> Name is required
+    </p>    
+
+    <input
+      id="email"
+      type="text"
+      formControlName="email"
+      placeholder="Enter your Email"
+      required
+    />
+
+    <textarea
+      id="body"
+      type="text"
+      formControlName="body"
+      placeholder=" Write your Message"
+      required
+    >
+    </textarea>
+    <button type="submit" [disabled]="!reactiveForm.valid">Submit</button>
+  </form>
+</section>
