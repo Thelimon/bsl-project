@@ -12,18 +12,22 @@
       placeholder=" Enter your Name"
       required
     />
-    <p class="text-danger" *ngIf=" reactiveForm.controls['name'].invalid && (reactiveForm.controls['name'].touched)"> Name is required
+    <p class="text-danger" *ngIf=" reactiveForm.controls['name'].invalid && (reactiveForm.controls['name'].touched) && (reactiveForm.controls['name'].dirty)"> Name is required
     </p>    
 
     <input
+      class="form-control"
       id="email"
       type="text"
       formControlName="email"
       placeholder="Enter your Email"
       required
     />
+    <p class="text-danger" *ngIf=" reactiveForm.controls['email'].invalid && (reactiveForm.controls['email'].touched) && (reactiveForm.controls['email'].dirty)"> Email is required
+    </p>   
 
     <textarea
+      class="form-control"
       id="body"
       type="text"
       formControlName="body"
@@ -31,6 +35,8 @@
       required
     >
     </textarea>
-    <button type="submit" [disabled]="!reactiveForm.valid">Submit</button>
+    <p class="text-danger" *ngIf=" reactiveForm.controls['body'].invalid && (reactiveForm.controls['body'].touched) && (reactiveForm.controls['body'].dirty)"> Message is required (minimum length 30)
+    </p>   
+    <button type="submit"  [disabled]="!reactiveForm.valid">Submit</button>
   </form>
 </section>
