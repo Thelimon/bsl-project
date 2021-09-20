@@ -13,7 +13,7 @@ import { FormComponent } from './components/form/form.component';
 @NgModule({
   declarations: [CarouselComponent, NavbarComponent, HeaderComponent, FormComponent],
   imports: [CommonModule, NgbModule, FormsModule, ProductsModule,ReactiveFormsModule],
-  exports: [HeaderComponent, FeaturedComponent, ProductSectionComponent,FormComponent],
+  exports: [HeaderComponent, FeaturedComponent, ProductSectionComponent,FormComponent]
 })
 export class CoreModule {}
 
