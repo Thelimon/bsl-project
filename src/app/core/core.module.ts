@@ -8,10 +8,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductsModule } from './components/products/products.module';
 import { FeaturedProductComponent } from './components/products/featured-product/featured-product.component';
 import { ProductComponent } from './components/products/product/product.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [CarouselComponent, NavbarComponent, HeaderComponent],
+  declarations: [CarouselComponent, NavbarComponent, HeaderComponent, FooterComponent ],
   imports: [CommonModule, NgbModule, FormsModule, ProductsModule],
-  exports: [HeaderComponent, FeaturedProductComponent, ProductComponent],
+  exports: [HeaderComponent, FeaturedProductComponent, ProductComponent, FooterComponent],
 })
 export class CoreModule {}
