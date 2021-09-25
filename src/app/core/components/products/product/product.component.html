@@ -1,1 +1,11 @@
-<p>product works!</p>
+<section>
+  <article
+    *ngFor="let product of products.slice(0, 3)"
+    class="card container w-50"
+  >
+    <img class="card-img-top" [src]="product.images" alt="Card image" />
+    <div class="card-img-overlay" >
+      <p>{{ product.item }}</p>
+    </div>
+  </article>
+</section>
