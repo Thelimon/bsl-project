@@ -8,11 +8,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductsModule } from './components/products/products.module';
 import { FeaturedProductComponent } from './components/products/featured-product/featured-product.component';
 import { ProductComponent } from './components/products/product/product.component';
+import { AboutComponent } from '../auth/pages/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
-
 @NgModule({
-  declarations: [CarouselComponent, NavbarComponent, HeaderComponent, FooterComponent ],
+  declarations: [CarouselComponent, NavbarComponent, HeaderComponent, AboutComponent,FooterComponent ],
   imports: [CommonModule, NgbModule, FormsModule, ProductsModule],
-  exports: [HeaderComponent, FeaturedProductComponent, ProductComponent, FooterComponent],
+  exports: [HeaderComponent, FeaturedProductComponent, ProductComponent, AboutComponent,FooterComponent ],
 })
 export class CoreModule {}
