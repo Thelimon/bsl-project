@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CoreModule } from './core/core.module';
+import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
+import { HomeModule } from './home/home.module';
+import { CoreModule } from './core/core.module';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     CoreModule,
+    HomeModule,
     HttpClientModule,
   ],
   providers: [],
