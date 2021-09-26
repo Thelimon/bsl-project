@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs/operators';
+import { DataService } from 'src/app/core/services/data.service';
 import { productI } from 'src/app/shared/interfaces';
-import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss'],
+  selector: 'app-category-product',
+  templateUrl: './category-product.component.html',
+  styleUrls: ['./category-product.component.scss'],
 })
-export class ProductComponent implements OnInit {
+export class CategoryProductComponent implements OnInit {
   public products: productI[] = [];
   constructor(private dataSvc: DataService) {}
 
