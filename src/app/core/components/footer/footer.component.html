@@ -35,7 +35,7 @@
     </div>
     <!-- Grid container -->
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="text-center p-3">
       © 2021 Copyright: DESK G by BeeSoft
       <br />
       <a
@@ -52,7 +52,7 @@
     <div class="container-arrow icons-info d-flex flex-column justify-content-center">
       <div class="arrow-top d-flex">
         <p>Back to the top</p>
-        <a href="#"><i class="far fa-arrow-to-top"></i></a>
+        <button *ngIf="isShow" (click)="gotoTop()"><i class="far fa-arrow-to-top"></i></button>
       </div>
     </div>
   </section>

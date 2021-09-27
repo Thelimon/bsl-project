@@ -24,9 +24,11 @@ footer {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    a {
+    button {
       text-decoration: none;
       cursor: pointer;
+      background-color: #21081a;
+      border-style:none;
       i {
         font-size: 2rem;
         padding: 0.4rem;
@@ -100,7 +102,7 @@ footer {
       .container-arrow {
         height: 2rem;
         .arrow-top{
-          a{
+          button {
             i{
               font-size: 1.8rem;
             }
