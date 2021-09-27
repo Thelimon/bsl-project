@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs/operators';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/core/services/data.service';
 import { productI } from 'src/app/shared/interfaces';
 
@@ -8,18 +8,37 @@ import { productI } from 'src/app/shared/interfaces';
   templateUrl: './category-product.component.html',
   styleUrls: ['./category-product.component.scss'],
 })
-export class CategoryProductComponent implements OnInit {
+export class CategoryProductComponent implements OnInit, OnDestroy {
   public products: productI[] = [];
-  constructor(private dataSvc: DataService) {}
+  public productsDisplay: productI[] = [];
+  private productSubscription: Subscription;
+
+  constructor(private dataSvc: DataService) {
+    this.productSubscription = new Subscription();
+  }
 
   ngOnInit(): void {
     this.getProducts();
   }
 
+  ngOnDestroy(): void {
+    this.productSubscription.unsubscribe();
+  }
+
   private getProducts(): void {
-    this.dataSvc
+    this.productSubscription = this.dataSvc
       .getProduct()
-      .pipe(tap((products: productI[]) => (this.products = products)))
-      .subscribe();
+      .subscribe((products: productI[]) => {
+        this.products = products;
+        this.productsDisplay = products;
+      });
+  }
+
+  public handleCategory(type: string) {
+    this.productsDisplay = this.products;
+    this.productsDisplay = this.productsDisplay.filter((product) => {
+      const categories = product.category;
+      return categories && categories.includes(type);
+    });
   }
 }

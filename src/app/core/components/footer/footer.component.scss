@@ -1,0 +1,48 @@
+footer {
+  .arrow-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      i {
+        font-size: 2rem;
+        padding: 0.8rem;
+        color: white;
+      }
+    }
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      i {
+        font-size: 2rem;
+        padding: 0.8rem;
+        color: white;
+      }
+    }
+  }
+  .icons-info {
+    padding: 1.5rem;
+    .container-data {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      .data {
+        gap: 1.5rem;
+        i {
+          font-size: 2rem;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
