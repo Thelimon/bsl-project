@@ -11,7 +11,7 @@
 }
 .item {
     
-    margin:0px 15px;
+    margin:15px 15px;
     text-align: center;
     
      a {
@@ -22,6 +22,11 @@
         img {
             width: 64px;
          }
+        img:hover{
+            transition: 0.3s ease-in-out;
+            transform: scale(1.1);
+        }
+
      } 
 }
 .item a:hover {
