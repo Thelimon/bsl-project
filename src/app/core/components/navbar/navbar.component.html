@@ -16,9 +16,12 @@
       alt="logo"
   /></a>
   <div class="navbar__actions order-lg-4 text-white">
-    <a><i class="fas fa-search mr-2"></i></a>
-    <a><i class="fas fa-shopping-cart mx-2"></i></a>
-    <a><i class="far fa-user ml-2"></i></a>
+    <a><i class="fas fa-search "></i></a>
+    <a><i class="far fa-user "></i></a>
+    <button routerLink= "cart" class="shopping-cart">
+      <i class="fas fa-shopping-cart"></i>
+      <div style="font-size: 10px; color:white" class="badge bg-danger">{{totalItem}}</div>
+    </button>
   </div>
   <div
     class="collapse navbar-collapse ml-lg-3 text-center text-lg-left"

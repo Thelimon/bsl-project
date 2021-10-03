@@ -1,0 +1,44 @@
+<div class="card-top container-fluid">
+   <div class="container d-flex">
+    <div class="item">
+        <a>
+            <img src="https://static.thenounproject.com/png/895280-200.png" alt="t-shirt">
+            <h6>T-shirts</h6>
+        </a>
+    </div>
+    <div class="item">
+        <a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIu-_Ko3LUCxVTZjBtA51tNCYJhuL_jL5PPQ&usqp=CAU" alt="desktop">
+            <h6>Desktops</h6>
+        </a>
+    </div>
+    <div class="item">
+        <a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyoxMLuIOnqCr5PWBR1gtaU7AkFqnkb09rzg&usqp=CAU" alt="Keyboard">
+            <h6>Keyboards</h6>
+        </a>
+    </div>
+    <div class="item">
+        <a>
+            <img src="https://static.thenounproject.com/png/828593-200.png" alt="chair">
+            <h6>Chairs</h6>
+        </a>
+    </div>
+   </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.images}}" alt="images">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;max-width: 100ch;">{{item.item}}</h5>
+                <p>{{item.description}}</p>
+                <p><strong>Price: </strong>${{item.price}}</p>
+                <button class="button" (click)=addtocart(item)>
+                    Add to cart
+                </button>
+            </div>
+        </ng-container>
+    </div>
+</div>
