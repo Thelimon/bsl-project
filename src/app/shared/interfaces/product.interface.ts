@@ -4,7 +4,7 @@ import { shippingDetailsI } from './shippingDetails.interface';
 export interface productI {
   manufacture_details: ManufactureDetailsI;
   shipping_details: shippingDetailsI;
-  _id: string;
+  id: string;
   item: string;
   description: string;
   price: number;

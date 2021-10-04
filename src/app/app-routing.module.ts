@@ -24,6 +24,10 @@ const routes: Routes = [
   },
   {
     path: 'cart',
+    component: CartComponent,
+  },
+  {
+    path: 'cart',
     loadChildren: () => import('./cart/cart.module').then((m) => m.CartModule),
   },
   {
