@@ -10,13 +10,13 @@
     ></iframe>
   </div>
   <form class="form" [formGroup]="reactiveForm">
-    <h2>Leave your Message Here!</h2>
+    <h2>Déjanos tu mensaje!</h2>
     <input
       class="form-control"
       id="name"
       type="text"
       formControlName="name"
-      placeholder=" Enter your Name"
+      placeholder=" Ingresa tu nombre"
       required
     />
     <p
@@ -27,7 +27,7 @@
         reactiveForm.controls['name'].dirty
       "
     >
-      Name is required
+      El nombre es requerido
     </p>
 
     <input
@@ -35,7 +35,7 @@
       id="email"
       type="text"
       formControlName="email"
-      placeholder="Enter your Email"
+      placeholder="Ingresa tu email"
       required
     />
     <p
@@ -46,7 +46,7 @@
         reactiveForm.controls['email'].dirty
       "
     >
-      Email is required
+     El email es requerido
     </p>
 
     <textarea
@@ -54,7 +54,7 @@
       id="body"
       type="text"
       formControlName="body"
-      placeholder=" Write your Message"
+      placeholder=" Escribe tu mensaje"
       required
     >
     </textarea>
@@ -66,14 +66,14 @@
         reactiveForm.controls['body'].dirty
       "
     >
-      Message is required (minimum length 30)
+      Mensaje es requerido (mínimo 30 caracteres)
     </p>
     <button
       type="submit"
       (click)="openWindowCustomClass(content)"
       [disabled]="!reactiveForm.valid"
     >
-      Submit
+      Enviar
     </button>
     <div
       class="modal fade"
@@ -86,7 +86,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
             <button
               type="button"
               class="close"
@@ -103,9 +103,9 @@
               class="btn btn-secondary"
               data-dismiss="modal"
             >
-              Close
+              Cerrar
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@
     </button>
   </div>
   <div class="modal-body">
-    <p>Succesfully Sent</p>
+    <p>Enviado exitosamente</p>
   </div>
   <div class="modal-footer">
     <button
@@ -134,14 +134,14 @@
       class="btn btn-light"
       (click)="modal.close('Close click')"
     >
-      Close
+      cerrar
     </button>
   </div>
 </ng-template>
 
 <ng-template #longContent let-modal>
   <div class="modal-header">
-    <h4 class="modal-title">Modal title</h4>
+    <h4 class="modal-title"></h4>
     <button
       type="button"
       class="close"
@@ -157,7 +157,7 @@
       class="btn btn-light"
       (click)="modal.close('Close click')"
     >
-      Close
+      cerrar
     </button>
   </div>
 </ng-template>

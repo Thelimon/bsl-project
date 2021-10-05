@@ -5,6 +5,7 @@ export interface productI {
   manufacture_details: ManufactureDetailsI;
   shipping_details: shippingDetailsI;
   id: string;
+  _id: string;
   item: string;
   description: string;
   price: number;
