@@ -41,4 +41,5 @@ export class CategoryProductComponent implements OnInit, OnDestroy {
       return categories && categories.includes(type);
     });
   }
+
 }
