@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-contact-form',
@@ -8,7 +8,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent implements OnInit {
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) {
+  }
 
   reactiveForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -16,13 +17,14 @@ export class ContactFormComponent implements OnInit {
     body: new FormControl('', [Validators.required, Validators.minLength(30)]),
   });
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   get f() {
     return this.reactiveForm.controls;
   }
 
   openWindowCustomClass(content: any) {
-    this.modalService.open(content, { windowClass: 'dark-modal' });
+    this.modalService.open(content, {windowClass: 'dark-modal'});
   }
 }

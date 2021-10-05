@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { DataService } from 'src/app/core/services/data.service';
-import { map, tap } from 'rxjs/operators';
-import { productI } from '../../../shared/interfaces';
+import {Component} from '@angular/core';
+import {DataService} from 'src/app/core/services/data.service';
+import {map} from 'rxjs/operators';
 
 
 @Component({
@@ -14,15 +13,15 @@ export class FeaturedProductComponent {
   public featuredProducts$ = this.dataSvc.getProduct()
     .pipe(
       map(products => products.filter(({category}) => category?.includes('bestseller'))),
-      map((products) => products.slice(0,6)),
+      map((products) => products.slice(0, 6)),
     );
 
   public othersProducts$ = this.dataSvc.getProduct()
     .pipe(
       map(products => products.filter(({category}) => !category?.includes('bestseller'))),
-      map((products) => products.slice(0,6)),
-      // tap(products => console.log(products)),
+      map((products) => products.slice(0, 6)),
     );
 
-  constructor(private dataSvc: DataService) {}
+  constructor(private dataSvc: DataService) {
+  }
 }

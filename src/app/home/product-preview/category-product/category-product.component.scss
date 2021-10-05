@@ -4,11 +4,13 @@ section {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+
     button {
       width: 8rem;
       margin-bottom: 2rem;
     }
   }
+
   .card {
     .card-img-top {
       width: 13rem;

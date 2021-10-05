@@ -4,31 +4,38 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 8rem;
+
   .section-1 {
     padding: 1.5rem;
+
     .container-data {
       .data {
         display: flex;
         gap: 1rem;
+
         a {
           text-decoration: none;
           color: white;
         }
+
         i {
           font-size: 1.2rem;
         }
       }
     }
   }
+
   .arrow-top {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+
     button {
       text-decoration: none;
       cursor: pointer;
       background-color: #21081a;
-      border-style:none;
+      border-style: none;
+
       i {
         font-size: 2rem;
         padding: 0.4rem;
@@ -36,12 +43,15 @@ footer {
       }
     }
   }
+
   .social {
     display: flex;
     justify-content: center;
+
     a {
       text-decoration: none;
       cursor: pointer;
+
       i {
         font-size: 2rem;
         padding: 0.2rem;
@@ -49,17 +59,22 @@ footer {
       }
     }
   }
+
   .icons-info {
     padding: 1.5rem;
+
     .container-data {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+
       .data {
         gap: 5rem;
+
         i {
           font-size: 2rem;
         }
+
         a {
           text-decoration: none;
           color: white;
@@ -68,6 +83,7 @@ footer {
     }
   }
 }
+
 @media (min-width: 375px) and (max-width: 768px) {
   footer {
     gap: 0;
@@ -75,12 +91,15 @@ footer {
     flex-direction: column;
     justify-content: none;
     align-items: none;
+
     .section-1 {
       .container-data {
         height: 6.5rem;
+
         .data {
           display: flex;
           justify-content: center;
+
           a {
             text-decoration: none;
             color: white;
@@ -88,22 +107,26 @@ footer {
         }
       }
     }
-    .section-2{
-      .social{
+
+    .section-2 {
+      .social {
         height: 2rem;
-        a{
-          i{
+
+        a {
+          i {
             font-size: 1.5rem;
           }
         }
       }
     }
-    .section-3{
+
+    .section-3 {
       .container-arrow {
         height: 2rem;
-        .arrow-top{
+
+        .arrow-top {
           button {
-            i{
+            i {
               font-size: 1.8rem;
             }
           }

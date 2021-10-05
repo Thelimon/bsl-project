@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { CartService } from '../core/services/cart.service';
-import { DataService } from '../core/services/data.service';
-import { productI } from '../shared/interfaces';
+import {Component, OnInit} from '@angular/core';
+import {CartService} from '../core/services/cart.service';
+import {DataService} from '../core/services/data.service';
+import {productI} from '../shared/interfaces';
 
 @Component({
   selector: 'app-products-add',
@@ -11,19 +11,22 @@ import { productI } from '../shared/interfaces';
 export class ProductsComponent implements OnInit {
 
   public productList: productI[] = []
-  constructor(private api: DataService, private cartService: CartService) { }
+
+  constructor(private api: DataService, private cartService: CartService) {
+  }
 
   ngOnInit(): void {
     this.api.getProduct()
-    .subscribe(res=>{
-      this.productList = res
+      .subscribe(res => {
+        this.productList = res
 
-      this.productList.forEach((a:productI)=> {
-        Object.assign(a,{quantity: 1 , total: a.price});
+        this.productList.forEach((a: productI) => {
+          Object.assign(a, {quantity: 1, total: a.price});
+        })
       })
-    })
   }
-  addtocart(item: productI){
+
+  addtocart(item: productI) {
     this.cartService.addToCart(item)
   }
 
