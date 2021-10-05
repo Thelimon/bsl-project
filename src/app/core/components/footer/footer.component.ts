@@ -21,11 +21,7 @@ export class FooterComponent {
 
     console.log('[scroll]', scrollPosition);
 
-    if (scrollPosition >= this.topPosToStartShowing) {
-      this.isShow = true;
-    } else {
-      this.isShow = false;
-    }
+    this.isShow = scrollPosition >= this.topPosToStartShowing;
   }
 
   // TODO: Cross browsing

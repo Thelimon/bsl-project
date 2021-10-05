@@ -1,0 +1,28 @@
+section .category-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section .category-container button {
+  width: 8rem;
+  margin-bottom: 2rem;
+}
+section .card .card-img-top {
+  width: 13rem;
+}
+
+@media (min-width: 768px) {
+  section .category-container button {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  section .category-container button {
+    width: 8rem;
+    height: 4rem;
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=category-product.component.css.map */

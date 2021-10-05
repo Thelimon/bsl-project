@@ -1,0 +1,62 @@
+.card-top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: white;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+.item {
+  margin: 15px 15px;
+  text-align: center;
+}
+.item a {
+  cursor: pointer;
+}
+.item a h6 {
+  font-weight: 800;
+}
+.item a img {
+  width: 64px;
+}
+.item a img:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.item a:hover {
+  color: #562f70;
+}
+
+.card {
+  padding: 20px;
+  margin: 30px;
+}
+.card img {
+  margin-bottom: 15px;
+  transition: 0.3s ease-in-out;
+}
+.card img:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.button {
+  background-color: #562f70;
+  color: #e9ecef;
+  border-radius: 0.625rem;
+  width: 6.25rem;
+  height: 3.125rem;
+}
+.button:hover {
+  background-color: #707487;
+  color: #162636;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=products.component.css.map */
