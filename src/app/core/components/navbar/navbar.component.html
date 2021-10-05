@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button
+    class="navbar-toggler"
+    type="button"
+    aria-controls="navbarNav"
+    aria-expanded="!isCollapsed"
+    aria-label="Toggle navigation"
+    (click)="toggleMenu()"
+  >
+    <span class="navbar-toggler-icon text-dark"></span>
+  </button>
+  <a class="navbar-brand mx-auto pl-3 pl-lg-0" href="#">
+    <img
+      src="https://i.ibb.co/94hjTw3/Logo2-removebg-preview.png"
+      width="80px"
+      alt="logo"
+  /></a>
+  <div class="navbar__actions order-lg-4 text-white">
+    <a><i class="fas fa-search mr-2"></i></a>
+    <a><i class="fas fa-shopping-cart mx-2"></i></a>
+    <a><i class="far fa-user ml-2"></i></a>
+  </div>
+  <div
+    class="collapse navbar-collapse ml-lg-3 text-center text-lg-left"
+    id="navbarNav"
+    [ngbCollapse]="isCollapsed"
+  >
+    <ul class="navbar-nav p-lg-0 pb-2">
+      <li class="nav-item active m-lg-0 m-3">
+        <a class="nav-link" href="#"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item m-lg-0 m-3">
+        <a
+          routerLink="/aboutus"
+          class="nav-link"
+          >About Us</a
+        >
+      </li>
+      <li class="nav-item m-lg-0 m-3">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+      <li class="nav-item m-lg-0 m-3">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

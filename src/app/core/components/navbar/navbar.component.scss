@@ -1,0 +1,30 @@
+@import "../../../../styles.scss";
+
+@media (min-width: 1024px) {
+  .navbar {
+    .navbar__actions {
+      a {
+        padding: 1rem;
+        color: #fff;
+        &:hover {
+          background-color: $eminence;
+          transition: 0.3s ease-in;
+          color: #000;
+        }
+        &:nth-child(3) {
+          margin-right: 1rem;
+        }
+      }
+    }
+    .navbar-nav {
+      li {
+        a {
+          &:hover {
+            background-color: $eminence;
+            transition: 0.3s ease-in;
+          }
+        }
+      }
+    }
+  }
+}

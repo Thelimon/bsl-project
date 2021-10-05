@@ -1,0 +1,25 @@
+<section>
+  <div class="category-container">
+    <button class="btn btn-secondary" (click)="handleCategory('t-shirt')">
+      T-shirts Category
+    </button>
+    <button class="btn btn-secondary" (click)="handleCategory('desktop')">
+      Desktops Category
+    </button>
+    <button class="btn btn-secondary" (click)="handleCategory('keyboard')">
+      Keyboard Category
+    </button>
+    <button class="btn btn-secondary" (click)="handleCategory('chair')">
+      Chairs Category
+    </button>
+  </div>
+  <article
+    *ngFor="let product of productsDisplay.slice(0, 7)"
+    class="card container w-50"
+  >
+    <img class="card-img-top" [src]="product.images" alt="Card image" />
+    <div class="card-img-overlay">
+      <p>{{ product.item }}</p>
+    </div>
+  </article>
+</section>
