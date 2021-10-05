@@ -22,15 +22,15 @@
                             <td><img style="width: 126px; "src="{{item.images}}" alt=""></td>
                             <td style="width: 25%;">{{item.description}}</td>
                             <td style="width: 12%;">{{item.price}}</td>
-                            <td style="width: 12%;">{{item.quantity}}</td>
+                            <input style="width: 30%; height: 20%; text-align: center;" type="number" class="form-control" id="input1" placeholder="">
                             <td style="width: 12%;">{{item.price}}</td>
                             <button (click)= "removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>  
                         </tr>
                         <tr>
                             <td colspan="4"></td>
-                            <td style="width: 25%;"><button  (click) = "emptycart()" class="btn btn-danger">Añadir al Carrito</button></td>
+                            <td style="width: 25%;"><button  (click) = "emptycart()" class="btn btn-danger">Borrar del Carrito</button></td>
                             <td style="width: 25%;" ><button [routerLink]= "['/products']"  class="btn btn-primary">Comprar mas</button></td>
-                            <td style="width: 25%;"><button class="btn btn-success">Checkout</button></td>
+                            <td ><button class="btn btn-success">Checkout</button></td>
                         </tr>
                     </tbody>
                 </table>
