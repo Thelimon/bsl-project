@@ -1,5 +1,5 @@
 <div class="card-top container-fluid">
-  <div class="container d-flex">
+  <div class="d-flex">
     <div class="item">
       <a>
         <img alt="t-shirt" src="https://static.thenounproject.com/png/895280-200.png">
@@ -30,18 +30,26 @@
 </div>
 
 <div class="container">
-  <div class="row">
-    <ng-container *ngFor="let item of productList">
-      <div class="card col-md-3">
-        <img alt="images" src="{{item.images}}">
-        <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;max-width: 100ch;">{{item.item}}</h5>
-        <p>{{item.description}}</p>
-        <p><strong>Price: </strong>${{item.price}}</p>
-        <button (click)=addtocart(item) class="button">
-          Agregar al carrito
-        </button>
-      </div>
-    </ng-container>
+  <div class="title text-center m-b">
+    <h2>Products</h2>
   </div>
+  <div class="card-container d-flex row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let item of productList" class="col">
+      <div class="card single-content">
+        <img alt="images" src="{{item.images}}"/>
+        <div class="card-body text-content">
+          <h5 class="card-title">
+            <strong>{{item.item}}</strong>
+          </h5>
+          <p class="card-text">{{item.description}}</p>
+          <p>
+            Price: <strong>{{item.price}}</strong>
+          </p>
+          <button (click)=addtocart(item) class="btn btn-primary float-right"> Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
