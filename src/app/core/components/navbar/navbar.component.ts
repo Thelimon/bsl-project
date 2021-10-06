@@ -8,13 +8,13 @@ import { CartService } from '../../services/cart.service';
 })
 export class NavbarComponent {
   isCollapsed = true;
-  public totalItem : number = 0;
-  constructor(private cartService: CartService){}
+  public totalItem: number = 0;
+  constructor(private cartService: CartService) {}
 
-  ngOnInit():void{
-    this.cartService.getProducts().subscribe(res=>{
-      this.totalItem = res.length
-    })
+  ngOnInit(): void {
+    this.cartService.getProducts().subscribe((res) => {
+      this.totalItem = res.length;
+    });
   }
   toggleMenu() {
     this.isCollapsed = !this.isCollapsed;

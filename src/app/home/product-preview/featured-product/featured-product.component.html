@@ -1,20 +1,21 @@
-<ng-container *ngIf="featuredProducts$| async as products; else loading">
-
+<ng-container *ngIf="featuredProducts$ | async as products; else loading">
   <section class="container">
     <div class="title text-center m-b">
       <h2>Featured Products</h2>
     </div>
 
-    <div class=" card-container d-flex row row-cols-1 row-cols-md-3 g-4">
+    <div class="card-container d-flex row row-cols-1 row-cols-md-3 g-4">
       <div *ngFor="let item of products" class="col">
         <div class="card single-content">
-          <img alt="Products" class="card-img-top" src="{{ item.images }}"/>
+          <img alt="Products" class="card-img-top" src="{{ item.images }}" />
 
           <div class="card-body text-content">
-            <h5 class="card-title"><strong> {{ item.item }} </strong></h5>
+            <h5 class="card-title">
+              <strong> {{ item.item }} </strong>
+            </h5>
 
             <p class="card-text">
-              {{item.description}}
+              {{ item.description }}
             </p>
 
             <a class="btn btn-primary float-right" href="#">Buy now</a>
@@ -23,7 +24,6 @@
       </div>
     </div>
   </section>
-
 </ng-container>
 
 <ng-template #loading>loading...</ng-template>

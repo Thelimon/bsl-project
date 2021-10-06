@@ -1,7 +1,7 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Subscription} from 'rxjs';
-import {DataService} from 'src/app/core/services/data.service';
-import {productI} from 'src/app/shared/interfaces';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { DataService } from 'src/app/core/services/data.service';
+import { productI } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-category-product',
@@ -41,5 +41,4 @@ export class CategoryProductComponent implements OnInit, OnDestroy {
       return categories && categories.includes(type);
     });
   }
-
 }
