@@ -1,163 +1,167 @@
-<section class="container section-form" id="contact">
-  <div class="div">
-    <iframe
-      allowfullscreen=""
-      height="450"
-      loading="lazy"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.991382225924!2d-75.56878904954822!3d6.264862695443175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428e695083c29%3A0x99f177323f8c67d5!2sRuta%20N!5e0!3m2!1sen!2sco!4v1632019643184!5m2!1sen!2sco"
-      style="border: 0"
-      width="600"
-    ></iframe>
-  </div>
-  <form [formGroup]="reactiveForm" class="form">
-    <h2>Déjanos tu mensaje!</h2>
-    <input
-      class="form-control"
-      formControlName="name"
-      id="name"
-      placeholder=" Ingresa tu nombre"
-      required
-      type="text"
-    />
-    <p
-      *ngIf="
-        reactiveForm.controls['name'].invalid &&
-        reactiveForm.controls['name'].touched &&
-        reactiveForm.controls['name'].dirty
-      "
-      class="text-danger"
-    >
-      El nombre es requerido
-    </p>
-
-    <input
-      class="form-control"
-      formControlName="email"
-      id="email"
-      placeholder="Ingresa tu email"
-      required
-      type="text"
-    />
-    <p
-      *ngIf="
-        reactiveForm.controls['email'].invalid &&
-        reactiveForm.controls['email'].touched &&
-        reactiveForm.controls['email'].dirty
-      "
-      class="text-danger"
-    >
-      El email es requerido
-    </p>
-
-    <textarea
-      class="form-control"
-      formControlName="body"
-      id="body"
-      placeholder=" Escribe tu mensaje"
-      required
-      type="text"
-    >
-    </textarea>
-    <p
-      *ngIf="
-        reactiveForm.controls['body'].invalid &&
-        reactiveForm.controls['body'].touched &&
-        reactiveForm.controls['body'].dirty
-      "
-      class="text-danger"
-    >
-      Mensaje es requerido (mínimo 30 caracteres)
-    </p>
-    <button
-      (click)="openWindowCustomClass(content)"
-      [disabled]="!reactiveForm.valid"
-      type="submit"
-    >
-      Enviar
-    </button>
-    <div
-      aria-hidden="true"
-      aria-labelledby="exampleModalLabel"
-      class="modal fade"
-      id="exampleModal"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"></h5>
-            <button
-              aria-label="Close"
-              class="close"
-              data-dismiss="modal"
-              type="button"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              class="btn btn-secondary"
-              data-dismiss="modal"
-              type="button"
-            >
-              Cerrar
-            </button>
-            <button class="btn btn-primary" type="button">Guardar</button>
+<section class="map-form">
+  <section class="container section-form" id="contact">
+    <div class="div">
+      <iframe
+        allowfullscreen=""
+        height="450"
+        loading="lazy"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.991382225924!2d-75.56878904954822!3d6.264862695443175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428e695083c29%3A0x99f177323f8c67d5!2sRuta%20N!5e0!3m2!1sen!2sco!4v1632019643184!5m2!1sen!2sco"
+        style="border: 0"
+        width="600"
+      ></iframe>
+    </div>
+    <form [formGroup]="reactiveForm" class="form">
+      <h2>Déjanos tu mensaje!</h2>
+      <input
+        class="form-control"
+        formControlName="name"
+        id="name"
+        placeholder=" Ingresa tu nombre"
+        required
+        type="text"
+      />
+      <p
+        *ngIf="
+          reactiveForm.controls['name'].invalid &&
+          reactiveForm.controls['name'].touched &&
+          reactiveForm.controls['name'].dirty
+        "
+        class="text-danger"
+      >
+        El nombre es requerido
+      </p>
+  
+      <input
+        class="form-control"
+        formControlName="email"
+        id="email"
+        placeholder="Ingresa tu email"
+        required
+        type="text"
+      />
+      <p
+        *ngIf="
+          reactiveForm.controls['email'].invalid &&
+          reactiveForm.controls['email'].touched &&
+          reactiveForm.controls['email'].dirty
+        "
+        class="text-danger"
+      >
+        El email es requerido
+      </p>
+  
+      <textarea
+        class="form-control"
+        formControlName="body"
+        id="body"
+        placeholder=" Escribe tu mensaje"
+        required
+        type="text"
+      >
+      </textarea>
+      <p
+        *ngIf="
+          reactiveForm.controls['body'].invalid &&
+          reactiveForm.controls['body'].touched &&
+          reactiveForm.controls['body'].dirty
+        "
+        class="text-danger"
+      >
+        Mensaje es requerido (mínimo 30 caracteres)
+      </p>
+      <button
+        (click)="openWindowCustomClass(content)"
+        [disabled]="!reactiveForm.valid"
+        type="submit"
+      >
+        Enviar
+      </button>
+      <div
+        aria-hidden="true"
+        aria-labelledby="exampleModalLabel"
+        class="modal fade"
+        id="exampleModal"
+        role="dialog"
+        tabindex="-1"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button
+                aria-label="Close"
+                class="close"
+                data-dismiss="modal"
+                type="button"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-secondary"
+                data-dismiss="modal"
+                type="button"
+              >
+                Cerrar
+              </button>
+              <button class="btn btn-primary" type="button">Guardar</button>
+            </div>
           </div>
         </div>
       </div>
+    </form>
+  </section>
+  
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title"></h4>
+      <button
+        (click)="modal.dismiss('Cross click')"
+        aria-label="Close"
+        class="close"
+        type="button"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-  </form>
+    <div class="modal-body">
+      <p>Enviado exitosamente</p>
+    </div>
+    <div class="modal-footer">
+      <button
+        (click)="modal.close('Close click')"
+        class="btn btn-light"
+        type="button"
+      >
+        cerrar
+      </button>
+    </div>
+  </ng-template>
+  
+  <ng-template #longContent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title"></h4>
+      <button
+        (click)="modal.dismiss('Cross click')"
+        aria-label="Close"
+        class="close"
+        type="button"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-footer">
+      <button
+        (click)="modal.close('Close click')"
+        class="btn btn-light"
+        type="button"
+      >
+        cerrar
+      </button>
+    </div>
+  </ng-template>
+
 </section>
 
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title"></h4>
-    <button
-      (click)="modal.dismiss('Cross click')"
-      aria-label="Close"
-      class="close"
-      type="button"
-    >
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <p>Enviado exitosamente</p>
-  </div>
-  <div class="modal-footer">
-    <button
-      (click)="modal.close('Close click')"
-      class="btn btn-light"
-      type="button"
-    >
-      cerrar
-    </button>
-  </div>
-</ng-template>
-
-<ng-template #longContent let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title"></h4>
-    <button
-      (click)="modal.dismiss('Cross click')"
-      aria-label="Close"
-      class="close"
-      type="button"
-    >
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-footer">
-    <button
-      (click)="modal.close('Close click')"
-      class="btn btn-light"
-      type="button"
-    >
-      cerrar
-    </button>
-  </div>
-</ng-template>

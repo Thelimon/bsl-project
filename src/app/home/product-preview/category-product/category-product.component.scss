@@ -1,4 +1,6 @@
 section {
+  background-color: #004e64;
+
   .category-container {
     display: flex;
     justify-content: space-evenly;
@@ -8,21 +10,32 @@ section {
     button {
       width: 8rem;
       margin-bottom: 2rem;
+      background-color: chartreuse;
+      color: black;
+      font-weight: bold;
     }
   }
 
   .container {
-    padding: 3rem;
-    margin-top: 10%;
+    padding: 3rem 3rem 0 3rem;
+
 
     .title {
       font-weight: bold;
+      margin-bottom: 2rem;
+
     }
 
     .card {
-      border-radius: 12px;
+      border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
       margin-bottom: 3rem;
+      img{
+        padding: 2rem;
+        height: 20rem;
+        width: 100%;
+        object-fit: contain;
+      }
       .card-body{
         .card-price{
           display: flex;
