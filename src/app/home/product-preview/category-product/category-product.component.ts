@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { CartService } from 'src/app/core/services/cart.service';
 import { DataService } from 'src/app/core/services/data.service';
 import { productI } from 'src/app/shared/interfaces';
 
@@ -8,12 +9,13 @@ import { productI } from 'src/app/shared/interfaces';
   templateUrl: './category-product.component.html',
   styleUrls: ['./category-product.component.scss'],
 })
+
 export class CategoryProductComponent implements OnInit, OnDestroy {
   public products: productI[] = [];
   public productsDisplay: productI[] = [];
   private productSubscription: Subscription;
 
-  constructor(private dataSvc: DataService) {
+  constructor(private dataSvc: DataService, private cartService: CartService) {
     this.productSubscription = new Subscription();
   }
 
@@ -40,5 +42,9 @@ export class CategoryProductComponent implements OnInit, OnDestroy {
       const categories = product.category;
       return categories && categories.includes(type);
     });
+  }
+
+  addtocart(item: productI) {
+    this.cartService.addToCart(item);
   }
 }

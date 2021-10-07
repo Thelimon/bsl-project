@@ -4,14 +4,36 @@ section {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+
     button {
       width: 8rem;
       margin-bottom: 2rem;
     }
   }
-  .card {
-    .card-img-top {
-      width: 13rem;
+
+  .container {
+    padding: 3rem;
+    margin-top: 10%;
+
+    .title {
+      font-weight: bold;
+    }
+
+    .card {
+      border-radius: 12px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+      margin-bottom: 3rem;
+      .card-body{
+        .card-price{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p{
+            margin: 0;
+          }
+        }
+        margin-bottom: 1rem;
+      }
     }
   }
 }

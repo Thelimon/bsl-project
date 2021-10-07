@@ -1,8 +1,32 @@
 @import "../../../../styles.scss";
 
+.navbar__actions {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  .shopping-cart {
+    background-color: #343a40;
+    border-style: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $eminence;
+      transition: 0.3s ease-in;
+      color: #000;
+      i {
+        color: black;
+      }
+    }
+    i {
+      color: white;
+    }
+  }
+}
 @media (min-width: 1024px) {
   .navbar {
     .navbar__actions {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
       a {
         padding: 1rem;
         color: #fff;
@@ -13,6 +37,22 @@
         }
         &:nth-child(3) {
           margin-right: 1rem;
+        }
+      }
+      .shopping-cart {
+        background-color: #343a40;
+        border-style: none;
+        cursor: pointer;
+        &:hover {
+          background-color: $eminence;
+          transition: 0.3s ease-in;
+          color: #000;
+          i {
+            color: black;
+          }
+        }
+        i {
+          color: white;
         }
       }
     }

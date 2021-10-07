@@ -1,25 +1,61 @@
 <section>
   <div class="category-container">
-    <button class="btn btn-secondary" (click)="handleCategory('t-shirt')">
+    <button (click)="handleCategory('t-shirt')" class="btn btn-secondary">
       T-shirts Category
     </button>
-    <button class="btn btn-secondary" (click)="handleCategory('desktop')">
+    <button (click)="handleCategory('desktop')" class="btn btn-secondary">
       Desktops Category
     </button>
-    <button class="btn btn-secondary" (click)="handleCategory('keyboard')">
+    <button (click)="handleCategory('keyboard')" class="btn btn-secondary">
       Keyboard Category
     </button>
-    <button class="btn btn-secondary" (click)="handleCategory('chair')">
+    <button (click)="handleCategory('chair')" class="btn btn-secondary">
       Chairs Category
     </button>
   </div>
-  <article
-    *ngFor="let product of productsDisplay.slice(0, 7)"
-    class="card container w-50"
-  >
-    <img class="card-img-top" [src]="product.images" alt="Card image" />
-    <div class="card-img-overlay">
-      <p>{{ product.item }}</p>
+
+  <section class="container">
+    <div class="title text-center mt-4">
+      <h2>Products</h2>
     </div>
-  </article>
+
+    <div class="d-flex row row-cols-1 row-cols-md-3 g-4">
+      <div *ngFor="let product of productsDisplay.slice(0, 7)" class="col">
+        <div class="card single-content">
+          <img
+            alt="Products"
+            class="card-img-top p-4"
+            src="{{ product.images }}"
+          />
+
+          <div class="card-body text-content">
+            <h5 class="card-title">
+              <strong>{{ product.item }}</strong>
+            </h5>
+
+            <p class="card-text">
+              {{ product.description }}
+            </p>
+
+            <div class="card-price">
+              <p>
+                <strong>{{
+                  product.price
+                    | currency: "COP $":true
+                    | COPtransform: ",":"."
+                    | COPtransform: ".00":""
+                }}</strong>
+              </p>
+              <a
+                class="btn btn-primary float-right"
+                href="#"
+                (click)="addtocart(product)"
+                >Buy now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>

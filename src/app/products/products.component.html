@@ -1,0 +1,75 @@
+<div class="card-top container-fluid">
+  <div class="icon-container d-flex">
+    <div class="item">
+      <a (click)="handleCategory('t-shirt')">
+        <img
+          alt="t-shirt"
+          src="https://static.thenounproject.com/png/895280-200.png"
+        />
+        <h6>Camisas</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="handleCategory('t-shirt')">
+        <img
+          alt="desktop"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIu-_Ko3LUCxVTZjBtA51tNCYJhuL_jL5PPQ&usqp=CAU"
+        />
+        <h6>Mesas</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="handleCategory('t-shirt')">
+        <img
+          alt="Keyboard"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyoxMLuIOnqCr5PWBR1gtaU7AkFqnkb09rzg&usqp=CAU"
+        />
+        <h6>Teclados</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="handleCategory('t-shirt')">
+        <img
+          alt="chair"
+          src="https://static.thenounproject.com/png/828593-200.png"
+        />
+        <h6>Sillas</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="title text-center m-b">
+    <h1>Products</h1>
+  </div>
+  <div class="card-container d-flex row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let item of productList" class="col">
+      <div class="card single-content">
+        <img alt="images" src="{{ item.images }}" />
+        <div class="card-body text-content">
+          <h5 class="card-title">
+            <strong>{{ item.item }}</strong>
+          </h5>
+          <p class="card-text">{{ item.description }}</p>
+          <div class="card-price">
+            <p>
+              <strong>{{
+                item.price
+                  | currency: "COP $":true
+                  | COPtransform: ",":"."
+                  | COPtransform: ".00":""
+              }}</strong>
+            </p>
+            <button
+              (click)="addtocart(item)"
+              class="btn btn-primary float-right"
+            >
+              Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

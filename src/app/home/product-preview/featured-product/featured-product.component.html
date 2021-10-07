@@ -1,1 +1,44 @@
-<p>featured-product works!</p>
+<ng-container *ngIf="featuredProducts$ | async as products; else loading">
+  <section class="container">
+    <div class="title text-center m-b">
+      <h2>Featured Products</h2>
+    </div>
+
+    <div class="card-container d-flex row row-cols-1 row-cols-md-3 g-4">
+      <div *ngFor="let item of products" class="col">
+        <div class="card single-content">
+          <img alt="Products" class="card-img-top" src="{{ item.images }}" />
+
+          <div class="card-body text-content">
+            <h5 class="card-title">
+              <strong> {{ item.item }} </strong>
+            </h5>
+
+            <p class="card-text">
+              {{ item.description }}
+            </p>
+
+            <div class="card-price">
+              <p>
+                <strong>{{
+                  item.price
+                    | currency: "COP $":true
+                    | COPtransform: ",":"."
+                    | COPtransform: ".00":""
+                }}</strong>
+              </p>
+              <a
+                class="btn btn-primary float-right"
+                href="#"
+                (click)="addtocart(item)"
+                >Buy now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>
+
+<ng-template #loading>loading...</ng-template>

@@ -4,7 +4,7 @@
     <div class="container-data">
       <div class="data d-flex flex-row">
         <i class="fas fa-envelope-square"></i>
-        <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox"
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
           ><p>Deskgsales@gmail.com</p></a
         >
       </div>
@@ -15,7 +15,7 @@
       <div class="data d-flex flex-row">
         <i class="fas fa-map-marker"></i>
         <p>
-          Complex Route N Calle 67 52-20 Piso 2 Torre A, Medellín, Antioquia
+          Complejo Ruta N Calle 67 52-20 Piso 2 Torre A, Medellín, Antioquia
         </p>
       </div>
     </div>
@@ -23,13 +23,13 @@
 
   <section class="section-2">
     <div class="social container p-4">
-      <a target="_blank" href="https://www.instagram.com/"
+      <a href="https://www.instagram.com/" target="_blank"
         ><i class="fab fa-instagram"></i
       ></a>
-      <a target="_blank" href="https://www.facebook.com/"
+      <a href="https://www.facebook.com/" target="_blank"
         ><i class="fab fa-facebook"></i
       ></a>
-      <a target="_blank" href="https://twitter.com/home"
+      <a href="https://twitter.com/home" target="_blank"
         ><i class="fab fa-twitter"></i
       ></a>
     </div>
@@ -39,20 +39,29 @@
       © 2021 Copyright: DESK G by BeeSoft
       <br />
       <a
-        target="_blank"
         class="text-white"
         href="https://www.iubenda.com/en/help/2859-terms-and-conditions-when-are-they-needed"
-        >Terms and conditions</a
+        target="_blank"
+        >Términos y condiciones</a
       >
     </div>
     <!-- Copyright -->
   </section>
 
   <section class="section-3">
-    <div class="container-arrow icons-info d-flex flex-column justify-content-center">
+    <div
+      class="
+        container-arrow
+        icons-info
+        d-flex
+        flex-column
+        justify-content-center
+      "
+    >
       <div class="arrow-top d-flex">
-        <p>Back to the top</p>
-        <button *ngIf="isShow" (click)="gotoTop()"><i class="far fa-arrow-to-top"></i></button>
+        <button (click)="gotoTop()" *ngIf="isShow">
+          <i class="far fa-arrow-to-top"></i>
+        </button>
       </div>
     </div>
   </section>

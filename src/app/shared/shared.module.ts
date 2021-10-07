@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductFilterPipe } from './pipes/product-filter.pipe';
-
+import { COPtransformPipe } from './pipes/coptransform.pipe';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [ProductFilterPipe],
-  exports: [CommonModule]
+  declarations: [COPtransformPipe],
+  exports: [CommonModule, COPtransformPipe],
 })
 export class SharedModule {}
