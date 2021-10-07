@@ -9,6 +9,7 @@ import { HomeModule } from './home/home.module';
 import { CoreModule } from './core/core.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProductsComponent } from './products/products.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, AboutUsComponent, ProductsComponent],
@@ -19,6 +20,7 @@ import { ProductsComponent } from './products/products.component';
     CoreModule,
     HomeModule,
     HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],

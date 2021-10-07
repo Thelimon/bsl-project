@@ -29,13 +29,25 @@
           />
 
           <div class="card-body text-content">
-            <h5 class="card-title">{{ product.item }}</h5>
+            <h5 class="card-title">
+              <strong>{{ product.item }}</strong>
+            </h5>
 
             <p class="card-text">
               {{ product.description }}
             </p>
 
-            <a class="btn btn-primary float-right" href="#">Buy now</a>
+            <div class="card-price">
+              <p>
+                <strong>{{
+                  product.price
+                    | currency: "COP $":true
+                    | COPtransform: ",":"."
+                    | COPtransform: ".00":""
+                }}</strong>
+              </p>
+              <a class="btn btn-primary float-right" href="#">Buy now</a>
+            </div>
           </div>
         </div>
       </div>

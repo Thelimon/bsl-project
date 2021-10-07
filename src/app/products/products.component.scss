@@ -35,7 +35,7 @@
 
   .title {
     font-weight: bold;
-    h2 {
+    h1 {
       margin-bottom: 2rem;
     }
   }
@@ -51,9 +51,15 @@
       margin-bottom: 1rem;
     }
     .card-body {
-      a {
-        margin: 1rem 0;
+      .card-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          margin: 0;
+        }
       }
+      margin-bottom: 1rem;
     }
     &:hover {
       transform: scale(1.03);

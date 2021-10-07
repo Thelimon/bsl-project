@@ -18,7 +18,17 @@
               {{ item.description }}
             </p>
 
-            <a class="btn btn-primary float-right" href="#">Buy now</a>
+            <div class="card-price">
+              <p>
+                <strong>{{
+                  item.price
+                    | currency: "COP $":true
+                    | COPtransform: ",":"."
+                    | COPtransform: ".00":""
+                }}</strong>
+              </p>
+              <a class="btn btn-primary float-right" href="#">Buy now</a>
+            </div>
           </div>
         </div>
       </div>
