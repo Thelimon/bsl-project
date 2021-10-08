@@ -14,12 +14,10 @@
       color: #000;
       i {
         color: black;
-        
       }
     }
     i {
       color: white;
-      font-size: 1.5rem;
     }
   }
 }
@@ -61,7 +59,6 @@
     .navbar-nav {
       li {
         a {
-          font-size: 1.2rem;
           &:hover {
             background-color: $eminence;
             transition: 0.3s ease-in;
