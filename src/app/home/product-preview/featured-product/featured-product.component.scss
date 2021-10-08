@@ -1,7 +1,8 @@
 @import "./src/styles";
 
 .back{
-  background-color: #162636;
+  background-color: #f8f9fa;
+  margin-top:2rem;
 
   .container {
     padding: 2rem;
@@ -11,13 +12,13 @@
       h2 {
         margin-bottom: 2rem;
         font-size: 2.5rem;
-        color: #fff;
+        color: #000;
       }
     }
   
     .card {
       border-radius: 5px;
-      box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 4%);
       margin-bottom: 3rem;
       .card-img-top {
         height: 20rem;
@@ -45,6 +46,59 @@
         transition: 0.3s ease-in;
       }
     }
+  }
+}
+
+/** Bloque Nosotros */
+.sobre-nosotros {
+  background-image: linear-gradient(to bottom, transparent 50%, #3c0d5e 50%, #32159b 100%), url(../../../../assets/img/streamer-desk-setup.jpg) ;
+  background-position: bottom bottom ;
+  padding: 10rem 0;
+  background-size: 100%, 50rem;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+
+  
+}
+
+@media (min-width: 768px) { 
+  .sobre-nosotros {
+      background-image: linear-gradient(to right, transparent 50%, #3c0d5e 50%, #32159b 100%), url(../../../../assets/img/streamer-desk-setup.jpg) ;
+      padding:  10rem 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment:fixed;
+  }
+}
+.sobre-nosotros-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+@media (min-width: 768px) { 
+  .sobre-nosotros-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: unset;
+      column-gap: 10rem;
+  }
+}
+.texto-nosotros {
+  grid-row: 2 / 3;
+  color: #FFF;
+  padding: 5rem;
+
+  h2{
+    color: #FFF;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    
+  }
+  p{
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) { 
+  .texto-nosotros {
+      grid-column: 2 / 3;
   }
 }
 

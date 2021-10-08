@@ -1,5 +1,9 @@
 @import "./src/styles";
 
+.back-products{
+  background-color: #f8f9fa;
+}
+
 .card-top {
   background-color: white;
   background-clip: border-box;
@@ -9,6 +13,8 @@
     justify-content: space-between;
     .item {
       text-align: center;
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      
       a {
         cursor: pointer;
 
@@ -31,7 +37,6 @@
 
 .container {
   padding: 2rem;
-  margin-top: 5%;
 
   .title {
     font-weight: bold;
@@ -42,8 +47,15 @@
 
   .card {
     border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 4%);
     margin-bottom: 3rem;
+
+    img{
+      padding: 2rem;
+      height: 20rem;
+      width: 100%;
+      object-fit: contain;
+    }
     .card-img-top {
       height: 20rem;
       border-top-right-radius: 12px;
@@ -75,6 +87,7 @@
       justify-content: space-evenly;
       .item {
         text-align: center;
+        
         img {
           width: 40px;
           &:hover {

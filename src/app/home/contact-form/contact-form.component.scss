@@ -1,5 +1,5 @@
 .map-form{
-  background-color: #707487;
+  background-color: #b5b7c2;
   padding: 2rem;
 
 }
@@ -10,7 +10,6 @@
   gap: 3.5rem;
   padding: 2.5rem;
   background-color: #eeeeee;
-  border: solid 1px black;
   border-radius: 30px;
 
   h2 {
@@ -52,15 +51,15 @@
     }
 
     button {
-      background-color: #562f70;
+      background-color: #21081a;
       color: #e9ecef;
       border-radius: 0.625rem;
       width: 6.25rem;
       height: 3.125rem;
 
       &:hover {
-        background-color: #707487;
-        color: #162636;
+        background-color: #682053;
+        color: #fff;
         font-weight: 900;
       }
     }

@@ -1,5 +1,5 @@
 section {
-  background-color: #004e64;
+  background-color: #f8f9fa;
 
   .category-container {
     display: flex;
@@ -10,9 +10,14 @@ section {
     button {
       width: 8rem;
       margin-bottom: 2rem;
-      background-color: chartreuse;
-      color: black;
+      color: rgb(16, 15, 15);
       font-weight: bold;
+      border-radius: 40px;
+      border: 1px solid black;
+    }
+    button:hover{
+      color: #fff;
+      background-color: #682053;
     }
   }
 
@@ -28,7 +33,7 @@ section {
 
     .card {
       border-radius: 5px;
-      box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 4%);
       margin-bottom: 3rem;
       img{
         padding: 2rem;
