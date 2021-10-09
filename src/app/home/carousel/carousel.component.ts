@@ -10,9 +10,13 @@ import {
   templateUrl: './carousel.component.html',
 })
 export class CarouselComponent {
-  images = [62, 83, 466, 965, 982, 1043, 738].map(
-    (n) => `https://picsum.photos/id/${n}/2500/500`
-  );
+  imagesURL = [
+    'https://i.ibb.co/bQbC09z/Banner-home-asus-monitores-strix-1.jpg',
+    'https://i.ibb.co/D4CKcxB/top-10-programming-tshirts-for-developers.jpg',
+    'https://geekzilla.tech/home/wp-content/uploads/2020/07/imagen-27.png',
+    'https://cdn.discordapp.com/attachments/819753648078192640/896075308044787793/unknown.png'
+  ];
+  images = this.imagesURL;
 
   paused = false;
   unpauseOnArrow = false;
