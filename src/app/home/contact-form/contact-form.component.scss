@@ -1,8 +1,16 @@
+.map-form{
+  background-color: #b5b7c2;
+  padding: 2rem;
+
+}
+
 .section-form {
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
   padding: 2.5rem;
+  background-color: #eeeeee;
+  border-radius: 30px;
 
   h2 {
     text-align: center;
@@ -22,12 +30,12 @@
   .form {
     border-radius: 6.25rem;
     width: 100%;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.25rem;
+
 
     input {
       width: 18.75rem;
@@ -43,15 +51,15 @@
     }
 
     button {
-      background-color: #562f70;
+      background-color: #21081a;
       color: #e9ecef;
       border-radius: 0.625rem;
       width: 6.25rem;
       height: 3.125rem;
 
       &:hover {
-        background-color: #707487;
-        color: #162636;
+        background-color: #682053;
+        color: #fff;
         font-weight: 900;
       }
     }
